@@ -337,7 +337,7 @@ function Typewriter() {
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const full = ROLES[index % ROLES.length];
+    const full = ROLES[index % ROLES.length] ?? "";
     const done = !deleting && text === full;
     const cleared = deleting && text === "";
 
